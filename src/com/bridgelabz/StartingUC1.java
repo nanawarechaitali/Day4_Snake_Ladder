@@ -17,7 +17,11 @@ public class StartingUC1 {
 
             checkOption = random.nextInt(3);
             if (checkOption == LADDER){
+                int check100 = positionCount;
                 positionCount += dice;
+                if (positionCount > 100) {
+                    positionCount = check100;
+                }
             } else if (checkOption == NOPLAY) {
             }else{
                 positionCount -= dice;
